@@ -21,8 +21,8 @@ def loadDataIntoSheets(sheet, wb):
     for row in sheet.iter_rows(): # For every row in the main sheet..
         newRow = []
         for cell in row: 
-            newRow.append(cell.value) # Add all of the values to a list..
-        ns = wb[newRow[0]] # Find the sheet matching the first value in the row/list..
+            newRow.append(cell.value) # Add all of the values to a list...
+        ns = wb[newRow[0]] # Find the sheet matching the first value in the row/list...
         ns.append(newRow) # Add all the values in the row/list to the matching sheet
     wb.remove(sheet) # Remove the main sheet as we don't need it anymore
 
